@@ -1,8 +1,9 @@
 {
   "name": "iyzipay-ts",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Iyzipay api with @types/node",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha $(find test -name '*Test.js')",
     "build": "tsc"

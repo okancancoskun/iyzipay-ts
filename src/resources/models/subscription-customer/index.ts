@@ -1,4 +1,4 @@
-import { IBody } from "src/interfaces";
+import { IBody } from "../../../../src/interfaces";
 import { IBillingAddress, IShippingAddress } from "..";
 import { LOCALE } from "../../../enum";
 

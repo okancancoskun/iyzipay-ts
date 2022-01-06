@@ -4,10 +4,14 @@ import {
   PAYMENT_CHANNEL,
   PAYMENT_GROUP,
 } from "../../../enum";
-import { IBillingAddress, IBuyer, IShippingAddress, IBasketItems } from "..";
+import { IBillingAddress } from "../billing-address";
+import { IBuyer } from "../buyer";
+import { IShippingAddress } from "../shipping-address";
+import { IBasketItems } from "../basket-items";
+
 import { IBody } from "../../../interfaces";
 
-export interface ICreateApmInitializeRequest {
+export interface ICreateApmInitializeRequest extends IBody {
   locale: LOCALE | string;
   conversationId: string;
   price: string;
@@ -24,7 +28,7 @@ export interface ICreateApmInitializeRequest {
   buyer: IBuyer;
   shippingAddress: IShippingAddress;
   billingAddress: IBillingAddress;
-  basketItems: Array<Omit<IBasketItems, "subMerchantKey" | "subMerchantPrice">>;
+  basketItems: Array<IBasketItems>;
 }
 
 export interface IRetrieveApmRequest extends IBody {

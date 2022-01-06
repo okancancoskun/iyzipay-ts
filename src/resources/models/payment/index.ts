@@ -1,4 +1,4 @@
-import { IBody } from "src/interfaces/IBody";
+import { IBody } from "../../../../src/interfaces";
 import { IBasketItems } from "../basket-items";
 import { IBillingAddress } from "../billing-address";
 import { IBuyer } from "../buyer";

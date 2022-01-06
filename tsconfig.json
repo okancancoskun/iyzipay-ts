@@ -16,7 +16,8 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "resolveJsonModule": true,
-    "traceResolution": true
+    "traceResolution": true,
+    "declaration": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
