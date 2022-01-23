@@ -1,25 +1,26 @@
 import { LOCALE } from "../../../enum";
 import { IBody } from "../../../interfaces";
-export interface ICreateSubscriptionProductRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+
+export class CreateSubscriptionProductRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   name: string;
   description: string;
 }
 
-export interface IUpdateSubscriptionProductRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class UpdateSubscriptionProductRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   name: string;
   description: string;
 }
-export interface ISubscriptionProductParam extends IBody {
+export class SubscriptionProductParam implements IBody {
   productReferenceCode?: string;
 }
 
-export interface IRetrieveSubscriptionProductListRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class RetrieveSubscriptionProductListRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   page: number;
   count: number;
 }

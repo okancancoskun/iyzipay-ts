@@ -17,30 +17,30 @@ interface ICustomer {
   billingAddress: IBillingAddress & { district: string };
   shippingAddress: IShippingAddress & { district: string };
 }
-export interface ISubscriptionParam extends IBody {
+export class SubscriptionParam implements IBody {
   subscriptionReferenceCode?: string;
 }
 
-export interface ICreateSubscriptionInitRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class CreateSubscriptionInitRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   callbackUrl: string;
   pricingPlanReferenceCode: string;
   subscriptionInitialStatus: SUBSCRIPTION_INITIAL_STATUS | string;
   paymentCard: IPaymentCard;
   customer: ICustomer;
 }
-export interface IUpgradeSubscriptionRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class UpgradeSubscriptionRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   newPricingPlanReferenceCode: string;
   upgradePeriod: SUBSCRIPTION_UPGRADE_PERIOD | string;
   useTrial: boolean;
 }
 
-export interface ISearchSubscriptionRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class SearchSubscriptionRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   page: number;
   count: number;
   subscriptionReferenceCode: string;

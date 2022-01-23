@@ -11,9 +11,9 @@ import { IBasketItems } from "../basket-items";
 
 import { IBody } from "../../../interfaces";
 
-export interface ICreateApmInitializeRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class CreateApmInitializeRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   price: string;
   paidPrice: string;
   currency: CURRENCY | string;
@@ -31,8 +31,8 @@ export interface ICreateApmInitializeRequest extends IBody {
   basketItems: Array<IBasketItems>;
 }
 
-export interface IRetrieveApmRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class RetrieveApmRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   paymentId: string;
 }

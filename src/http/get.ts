@@ -1,6 +1,6 @@
 import { IBody, IConfig } from "../interfaces";
 import https from "https";
-import { generateHttpHeaders } from "../hooks";
+import { generateHttpHeaders } from "../utils";
 
 export const _get = async (path: string, config: IConfig) => {
   return new Promise((resolve, reject) => {

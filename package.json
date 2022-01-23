@@ -1,6 +1,6 @@
 {
   "name": "iyzipay-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Iyzipay api with @types/node",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

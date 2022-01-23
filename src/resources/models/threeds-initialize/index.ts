@@ -1,15 +1,13 @@
-import {
-  IBuyer,
-  IPaymentCard,
-  IShippingAddress,
-  IBillingAddress,
-  IBasketItems,
-} from "..";
+import { IBuyer } from "../buyer";
+import { IPaymentCard } from "../payment-card";
+import { IShippingAddress } from "../shipping-address";
+import { IBillingAddress } from "../billing-address";
+import { IBasketItems } from "../basket-items";
 import { PAYMENT_CHANNEL, PAYMENT_GROUP } from "../../../enum";
 import { IBody } from "../../../interfaces";
-export interface ICreate3DsInitializeRequest extends IBody {
-  locale: string;
-  conversationId: string;
+export class Create3DsInitializeRequest implements IBody {
+  locale?: string;
+  conversationId?: string;
   price: string;
   paidPrice: string;
   currency: string;

@@ -12,15 +12,15 @@ interface ICustomer {
   shippingAddress: IShippingAddress & { district: string };
 }
 
-export interface ICreateSubscriptionCheckoutFormInitRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class CreateSubscriptionCheckoutFormInitRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   callbackUrl: string;
   pricingPlanReferenceCode: string;
   subscriptionInitialStatus: SUBSCRIPTION_INITIAL_STATUS | string;
   customer: ICustomer;
 }
 
-export interface ISubscriptionCheckoutFormParam extends IBody {
+export class SubscriptionCheckoutFormParam implements IBody {
   checkoutFormToken: string;
 }

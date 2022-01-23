@@ -1,9 +1,13 @@
-import { IBasketItems, IBillingAddress, IBuyer, IShippingAddress } from "..";
+import { IBasketItems } from "../basket-items";
+import { IBillingAddress } from "../billing-address";
+import { IBuyer } from "../buyer";
+import { IShippingAddress } from "../shipping-address";
 import { LOCALE, CURRENCY, PAYMENT_GROUP } from "../../../enum";
 import { IBody } from "../../../interfaces";
-export interface ICreateCheckoutFormInitializeRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+
+export class CreateCheckoutFormInitializeRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   price: string;
   paidPrice: string;
   currency: CURRENCY | string;

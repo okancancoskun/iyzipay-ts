@@ -1,19 +1,19 @@
 import { _post, _put, _delete, _get } from "../../http";
 import { IConfig } from "../../interfaces";
 import {
-  IUpdateSubscriptionCardRequest,
-  IUpdateSubscriptionCardWithSubscriptionReferenceCodeRequest,
+  UpdateSubscriptionCardRequest,
+  UpdateSubscriptionCardWithSubscriptionReferenceCodeRequest,
 } from "../models";
 export class SubscriptionCard {
   constructor(protected readonly config: IConfig) {}
 
-  public async update(body: IUpdateSubscriptionCardRequest) {
+  public async update(body: UpdateSubscriptionCardRequest) {
     var path: string = "/v2/subscription/card-update/checkoutform/initialize";
     return await _post(path, body, this.config);
   }
 
   public async updateWithSubscriptionReferenceCode(
-    body: IUpdateSubscriptionCardWithSubscriptionReferenceCodeRequest
+    body: UpdateSubscriptionCardWithSubscriptionReferenceCodeRequest
   ) {
     var path: string =
       "/v2/subscription/card-update/checkoutform/initialize/with-subscription";

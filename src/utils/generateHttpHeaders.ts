@@ -5,7 +5,7 @@ import {
   generateAuthorizationHeaderV2,
   generateRandomString,
   generateRequestString,
-} from "../hooks";
+} from ".";
 
 export const generateHttpHeaders = (
   path: string,

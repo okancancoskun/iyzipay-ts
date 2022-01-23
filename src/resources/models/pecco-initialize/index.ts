@@ -1,4 +1,7 @@
-import { IBillingAddress, IBuyer, IShippingAddress } from "..";
+import { IBillingAddress } from "../billing-address";
+import { IBuyer } from "../buyer";
+import { IShippingAddress } from "../shipping-address";
+
 import { IBody } from "../../../interfaces";
 import { LOCALE } from "../../../enum";
 interface IPeccoBasketItem {
@@ -9,9 +12,10 @@ interface IPeccoBasketItem {
   itemType: string;
   price: string;
 }
-export interface ICreatePeccoInitializeRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+
+export class CreatePeccoInitializeRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   price: string;
   paidPrice: string;
   currency: string;

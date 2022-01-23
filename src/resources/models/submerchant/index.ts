@@ -1,9 +1,9 @@
 import { IBody } from "../../../interfaces";
 import { LOCALE, SUB_MERCHANT_TYPE, CURRENCY } from "../../../enum";
 
-export interface ICreateSubMerchantRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class CreateSubMerchantRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   subMerchantExternalId: string;
   subMerchantType: SUB_MERCHANT_TYPE | string;
   address: string;
@@ -20,9 +20,9 @@ export interface ICreateSubMerchantRequest extends IBody {
   currency: CURRENCY | string;
 }
 
-export interface IUpdateSubMerchantRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class UpdateSubMerchantRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   subMerchantKey: string;
   iban: string;
   address: string;
@@ -38,8 +38,8 @@ export interface IUpdateSubMerchantRequest extends IBody {
   currency: CURRENCY | string;
 }
 
-export interface IRetrieveSubMerchantRequest extends IBody {
-  locale: LOCALE | string;
-  conversationId: string;
+export class RetrieveSubMerchantRequest implements IBody {
+  locale?: LOCALE | string;
+  conversationId?: string;
   subMerchantExternalId: string;
 }
